@@ -1,0 +1,135 @@
+@import url(https://fonts.googleapis.com/css?family=Muli:400, 300);
+body { margin-top: 3%; }
+
+.calendar, .calendar_weekdays, .calendar_content {
+    max-width: 300px;
+}
+.calendar {
+    margin: auto;
+    font-family:'Muli', sans-serif;
+    font-weight: 400;
+    background-color: #333947;
+    border-radius: 5px;
+    padding-top: 10px;
+}
+.calendar_content, .calendar_weekdays, .calendar_header {
+    position: relative;
+    overflow: hidden;
+}
+.calendar_weekdays div, .calendar_content div {
+    width: 14.28571%;
+    overflow: hidden;
+    text-align: center;
+    background-color: transparent;
+    color: #6f6f6f;
+    font-size: 14px;
+}
+.calendar_weekdays div {
+    display:inline-block;
+    vertical-align:top;
+    font-size: 12px;
+}
+.calendar_content div {
+    border: 1px solid transparent;
+    float: left;
+    padding: 7px;
+}
+.calendar_content div:hover {
+    border: 1px solid #dcdcdc;
+    cursor: default;
+}
+.calendar_content div.blank:hover {
+    cursor: default;
+    border: 1px solid transparent;
+}
+.calendar_content div.past-date {
+    color: #d5d5d5;
+}
+.calendar_content div.today {
+    font-weight: bold;
+    font-size: 14px;
+    color: #87b633;
+}
+.calendar_content div.selected {
+    background-color: #05a342;
+    border-radius: 30px;
+    border: none;
+
+}
+.calendar_header {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #2e3442;
+}
+.calendar_header h1, .calendar_header h2 {
+    padding: 0 10px;
+    font-family:'Muli', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    color: #ffffff;
+    float:left;
+    width:70%;
+    margin: 0 0 10px;
+    text-transform: lowercase !important;
+}
+.calendar_header h2::first-letter { text-transform: capitalize !important;}
+button.switch-month {
+    background-color: transparent;
+    padding: 0;
+    outline: none;
+    border: none;
+    color: #dcdcdc;
+    float: left;
+    width:15%;
+    transition: color .2s;
+}
+button.switch-month:hover {
+    color: #87b633;
+}
+/*edit datepicker*/
+.calendar-box-on{
+    display: block;
+}
+.time_calendar {
+    background-color: #21252e;
+    border: 1px solid #21252e;
+    width: 300px;
+    padding: 20px;
+}
+.timerBox, .yearBox, .calendar{
+    margin-bottom: 15px;
+}
+.timerBox input{
+    background-color: #333947;
+    border: 0px;
+    color: #fff;
+    display: inline-block;
+    width: 80%;
+    font-size: 22px;
+}
+.timerBox span{
+    padding:10px 8px;
+    background-color: #333947;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+.yearBox{
+    background-color: #333947;
+    padding-top: 8px;
+}
+.closeBtn .setDate{
+    width: 79%;
+    margin-right: 10px;
+}
+.btn_cal{
+    background: url("../../assets/images/i_calendar.jpg") no-repeat 6px 8px #333947;
+    padding:20px 16px;
+}
+.closeCalendar{
+    font-size: 15px;
+}
+@media (min-width: 576px){
+.timerBox .form-control {
+        width: 80%;
+    }
+}

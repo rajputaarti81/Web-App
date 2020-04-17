@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,300&display=swap');
+body{
+    background: #22252c;
+    color: #ffffff;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    margin: 0px 0px;
+}
+* {
+    margin: 0px;
+    padding: 0px;
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #ffffff !important;
+}
+.navbar{
+    padding:10px 0px;
+}
+.navbar-toggler::after{
+    content:"\0034";
+    font-size: 13px;
+    padding: 5px 8px;
+    background-color: #ce2639;
+    color: #ffffff;
+    border-radius: 50px;
+    position: absolute;
+    z-index: 1000;
+    top:20px;
+    border: 1px solid #21252e;
+}
+.navbar-dark .navbar-toggler{
+    border: none;
+}
+.logo{
+    color:#ffffff;
+    font-size: 16px;
+    background: url("../../assets/images/logo.jpg") no-repeat 4px 4px;
+    padding-left: 32px;
+}
+.logo span{
+    padding-top: 2px;
+    display: inline-block;
+}
+.search input {
+    border: 0px;
+    color:#ffffff;
+    font-weight: bold;
+    background-color: #333947;
+    font-size: 15px;
+    padding: 10px;
+}
+.search input:focus {
+    color:#ffffff;
+    background-color: #272c37;
+}
+.add_time{
+    background: url("../../assets/images/add-time.png") no-repeat center right;
+    background-origin: content-box;
+}
+/*Circle Timer*/
+button[data-setter] {
+    outline: none;
+    background: transparent;
+    border: none;
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-size: 18px;
+    width: 25px;
+    height: 30px;
+    color: #F7958E;
+    cursor: pointer;
+}
+button[data-setter]:hover { opacity: 0.5; }
+
+.setters {
+    position: absolute;
+    left: 85px;
+    top: 75px;
+}
+.controlls {
+    position: absolute;
+    top: 55px;
+    text-align: center;
+}
+.display-remain-time {
+    font-family: 'Roboto';
+    font-weight: 100;
+    font-size: 35px;
+    color: #ffffff;
+}
+.e-c-base {
+    fill: none;
+    stroke: #ffffff;
+    stroke-width: 1px;
+}
+.e-c-progress {
+    fill: none;
+    stroke: #e5233b;
+    stroke-width: 1px;
+    transition: stroke-dashoffset 0.7s;
+}
+.e-c-pointer1, .e-c-pointer2 {
+    fill: #e5233b;
+    stroke-width: 4px;
+    stroke: #e5233b;
+}
+.e-c-pointer2 {
+    fill: #ffffff;
+}
+
+.clock{
+    margin-top: 65px;
+    background-color: #e6242d;
+    border-radius: 30px;
+    padding: 15px;
+    position: absolute;
+}
+
+.tick {
+    margin-top: 130px;
+    background: url(../../assets/images/tick.png) no-repeat #01a63d 10px 9px;
+    border-radius: 5px;
+    padding: 19px;
+    position: absolute;
+    color: #ffffff;
+}
+/*Pop Up Box*/
+.popup-box, .time_calendar {
+    letter-spacing: 0.05em;
+    background-color: #21252e;
+    border: 1px solid #21252e;
+    top: 0;
+    width: 300px;
+    position: absolute;
+    right: 70px;
+    font-family: 'Open Sans', sans-serif;
+    z-index: 1000;
+    transform: scale(0); /*scale it to a smaller size*/
+    transition: all .5s ease-in-out; /*make it smooth*/
+    -webkit-box-shadow: 5px 6px 17px -7px rgba(0,0,0,1);
+    -moz-box-shadow: 5px 6px 17px -7px rgba(0,0,0,1);
+    box-shadow: 5px 6px 17px -7px rgba(0,0,0,1);
+}
+
+.popup-box-on, .calendar-box-on {
+    display: block !important;
+    transform: scale(1) /*scale it to a default size*/
+}
+.popup-box .oi-clock:before {
+    content: '\e03b';
+    right: 0;
+    position: absolute;
+}
+.back{
+    color: #ffffff;
+    font-weight: lighter;
+    background: url("../../assets/images/i_close.png") no-repeat;
+    width: 39px;
+    height: 23px;
+}
+.subtitle {
+    line-height: 0.1;
+    font-size: 12px;
+}
+.subtitle span {
+    display: flex;
+    width: 100%;
+    background-color: #21252e;
+    padding: 10px 0px 0px 0px;
+}
+.subtitle span:after {
+    content: '';
+    border-top: 2px solid #84898d;
+    margin: 0 0 0 20px;
+    flex: 1 0 20px;
+    margin-left: 20px;
+}
+.popup-box ul.today {list-style: none; margin-left: 20px;}
+.popup-box ul.today li::before {
+    content: "\2022";
+    font-weight: bold;
+    display: inline-block;
+    font-size: 225%;
+    position: absolute;
+    height: 1em;
+    top: 0.9em;
+    left: -20px;
+    margin-top: -0.8em;
+    width: 1em;
+}
+.popup-box ul.today li{
+    list-style-type: none;
+    font-size: 14px;
+    position: relative;
+    margin:0px;
+    padding:15px 0px;
+    border-bottom: 1px solid #3a3f4b;
+}
+.popup-box ul.today li:last-child{
+    border-bottom: none;
+}
+.popup-box ul.today li::after {
+    content: "\25BC";
+    color: #ffffff;
+    font-size: 80%;
+    position: absolute;
+    right: 0;
+}
+.popup-box ul.today li.red::before{
+    color: #ea2635;
+}
+.popup-box ul.today li.green::before{
+    color: #02a53c;
+}
+.popup-box ul.today li.yellow::before{
+    color: #f9af4d;
+}
+/* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
+
+/* Portrait and Landscape */
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 568px)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .popup-box, .time_calendar {
+        width: 260px;}
+}
